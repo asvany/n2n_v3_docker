@@ -1,0 +1,15 @@
+{
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "cabbage.zen.us",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "xldb",
+			"group": "zen",
+			"database": "test",
+			"username": "postgres",
+			"password": ""
+		}
+	]
+}

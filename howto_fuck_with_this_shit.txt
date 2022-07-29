@@ -1,0 +1,11 @@
+
+# docker remove all shitty garbage
+docker rm $(docker ps -aq) ; docker  rmi -f $( docker images -qa)             
+ 
+
+# run as a normal user in a docker env
+time ./build.sh 
+( ./push.sh )
+
+# run as root
+docker load </tmp/n2nv3docker && docker run    -d --privileged --net=host --name n2n_edge   -e interfaceaddress=10.100.0.11 -e communityname=customCOM -e Encryptionkey=1234 -e supernodenet=supernode.example.com:18888  asvany/n2nv3docker:latest
